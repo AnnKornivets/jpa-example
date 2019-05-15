@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsdd">
+    <persistence-unit name="OrmExample" transaction-type="RESOURCE_LOCAL">
+      <class>entity.UserTable</class>
+        <properties>
+            <!--Строка подключения к БД-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/exampleDB"/>
+            <!--Имя пользователя БД-->
+
+            <property name="javax.persistence.jdbc.user" value="Anna"/>
+            <!--Пароль БД-->
+
+            <property name="javax.persistence.jdbc.password" value="2517"/>
+            <!--Используемый драйвер-->
+
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+            <property name="eclipselink.logging.level" value="FINE"/>
+
+            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
+            <!---->
+            <!--Если таблица не существует она будет создана, если есть то внесет изменения-->
+            <!--также есть-->
+            <!--none-->
+            <!--drop and create-tables-->
+            <!--create-tables-->
+        </properties>
+    </persistence-unit>
+</persistence>
