@@ -11,7 +11,7 @@ public class Article {
     private int id;
     private String title;
     @ManyToOne
-    @JoinColumn(name="parent_id",nullable = false)
+   // @JoinColumn(name="parent_id",nullable = false)
     private Author author;
 
     public int getId() {

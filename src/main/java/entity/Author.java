@@ -12,9 +12,13 @@ public class Author {
     private int id;
     private String name;
 
-    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL, fetch=FetchType.LAZY, orphanRemoval=true)
+    @OneToMany(mappedBy = "author",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
+            orphanRemoval = true)
+    private List<Article> articles = new ArrayList<Article>();
 
-    private List<Article> articles= new ArrayList<Article>();
+
 
     public int getId() {
         return id;

@@ -24,22 +24,21 @@ public class TstArticle {
 
 
             author.getArticles().add(article); // тоже самое
-          //  manager.persist(article); //добавили статьи
+           manager.persist(article); //добавили статьи
 
         }
         manager.getTransaction().commit();
 
-        Author author1=manager.find(Author.class,202);
-        List<Article> articles=manager.find(Author.class,202).getArticles();
+        Author author1 = manager.find(Author.class, 202);
+        List<Article> articles = manager.find(Author.class, 202).getArticles();
 
-        for (Article article:articles){
-            System.out.println(article.getTitle());
-            article.setTitle("Новое название 1: " +article.getId());
-
+        for (Article article: articles){
+            System.out.println(article);
+            article.setTitle("Новое название: " + article.getId());
         }
+
         manager.getTransaction().begin();
         manager.merge(author);
         manager.getTransaction().commit();
-
     }
 }
