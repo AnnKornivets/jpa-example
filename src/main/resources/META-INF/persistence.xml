@@ -4,7 +4,12 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsdd">
     <persistence-unit name="OrmExample" transaction-type="RESOURCE_LOCAL">
-      <class>entity.UserTable</class>
+<!--      <class>entity.UserTable</class>-->
+<!--      <class>entity.Book</class>-->
+<!--        <class>entity.Author</class>-->
+<!--       <class>entity.Article</class>-->
+        <class>entity.Group</class>
+        <class>entity.Student</class>
         <properties>
             <!--Строка подключения к БД-->
             <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/exampleDB"/>
@@ -26,6 +31,7 @@
             <!--также есть-->
             <!--none-->
             <!--drop and create-tables-->
+<!--            create-or-extend-tables-->
             <!--create-tables-->
         </properties>
     </persistence-unit>

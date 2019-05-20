@@ -6,8 +6,8 @@ import javax.persistence.*;
 @Table
 public class UserTable {
     // 1 вариант
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.AUTO)
+   @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
 // auto 1+50+50 id
 
     // 2 вариант
